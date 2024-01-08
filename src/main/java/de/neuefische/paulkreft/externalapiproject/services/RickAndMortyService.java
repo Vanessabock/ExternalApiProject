@@ -31,4 +31,11 @@ public class RickAndMortyService {
     public Character getCharacterById(int id) {
         return restClient.get().uri("/character/" + id).retrieve().body(Character.class);
     }
+
+    public int getSpeciesCount(Optional<String> species) {
+        if(species.isEmpty()) {
+            return 0;
+        }
+        return  restClient.get().uri("/character?species=" + species.get()).retrieve().body(RickAndMortyCharacterResponse.class).info().count();
+    }
 }
