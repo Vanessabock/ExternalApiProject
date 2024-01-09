@@ -2,6 +2,7 @@ package de.neuefische.paulkreft.externalapiproject.services;
 
 import de.neuefische.paulkreft.externalapiproject.models.Character;
 import de.neuefische.paulkreft.externalapiproject.models.api.RickAndMortyCharacterResponse;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestClient;
 
@@ -10,7 +11,14 @@ import java.util.Optional;
 
 @Service
 public class RickAndMortyService {
-    private final RestClient restClient = RestClient.builder().baseUrl("https://rickandmortyapi.com/api").build();
+
+    private final RestClient restClient;
+
+    public RickAndMortyService(@Value("${app.rickandmorty.api.url}") String url) {
+        restClient = RestClient.builder()
+                .baseUrl(url)
+                .build();
+    }
 
     public List<Character> getCharacters(Optional<String> status) {
         String uri = "/character";
