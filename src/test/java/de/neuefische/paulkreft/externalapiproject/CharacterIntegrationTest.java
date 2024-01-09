@@ -222,8 +222,23 @@ public class CharacterIntegrationTest {
                         """));
 
         //THEN
-        
+        MvcResult result = mockMvc.perform(MockMvcRequestBuilders.get("/api/characters?status=Alive"))
 
+          //WHEN
+                .andExpect(status().isOk())
+                .andExpect(content().json("""
+                                                    [
+                           {"id":"1",
+                           "name":"TEst",
+                           "species": "Human"},
+                           {"id": "4",
+                            "name": "Bert",
+                            "species": "Human"}
+                        ]
+                                                    """))
+                .andReturn();
+
+        assertEquals(result.getResponse().getStatus(), 200);
 
     }
 }
