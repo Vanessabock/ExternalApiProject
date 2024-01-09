@@ -99,7 +99,7 @@ public class CharacterIntegrationTest {
                 .andExpect(status().isOk())
                 .andExpect(content().json("""
                         [
-                            {"id":"1",
+                           {"id":"1",
                            "name":"TEst",
                            "species": "Human"}
                         ]
@@ -148,52 +148,6 @@ public class CharacterIntegrationTest {
                                                                                       "created": "2017-11-04T18:48:46.250Z"
                                                                                   },
                                                                                   {
-                                                                                      "id": 2,
-                                                                                      "name": "TEst2",
-                                                                                      "status": "Dead",
-                                                                                      "species": "Human",
-                                                                                      "type": "",
-                                                                                      "gender": "Male",
-                                                                                      "origin": {
-                                                                                                 "name": "Earth (C-137)",
-                                                                                                 "url": "https://rickandmortyapi.com/api/location/1"
-                                                                                       },
-                                                                                      "location": {
-                                                                                                   "name": "Citadel of Ricks",
-                                                                                                    "url": "https://rickandmortyapi.com/api/location/3"
-                                                                                      },
-                                                                                      "image": "https://rickandmortyapi.com/api/character/avatar/1.jpeg",
-                                                                                      "episode": [
-                                                                                          "https://rickandmortyapi.com/api/episode/1",
-                                                                                          "https://rickandmortyapi.com/api/episode/2",
-                                                                                          "https://rickandmortyapi.com/api/episode/3"        
-                                                                                      ],
-                                                                                      "url": "https://rickandmortyapi.com/api/character/1",
-                                                                                      "created": "2017-11-04T18:48:46.250Z"
-                                                                               }   ,{
-                                                                                      "id": 3,
-                                                                                      "name": "Ernie",
-                                                                                      "status": "Dead",
-                                                                                      "species": "Human",
-                                                                                      "type": "",
-                                                                                      "gender": "Male",
-                                                                                      "origin": {
-                                                                                                 "name": "Earth (C-137)",
-                                                                                                 "url": "https://rickandmortyapi.com/api/location/1"
-                                                                                       },
-                                                                                      "location": {
-                                                                                                   "name": "Citadel of Ricks",
-                                                                                                    "url": "https://rickandmortyapi.com/api/location/3"
-                                                                                      },
-                                                                                      "image": "https://rickandmortyapi.com/api/character/avatar/1.jpeg",
-                                                                                      "episode": [
-                                                                                          "https://rickandmortyapi.com/api/episode/1",
-                                                                                          "https://rickandmortyapi.com/api/episode/2",
-                                                                                          "https://rickandmortyapi.com/api/episode/3"        
-                                                                                      ],
-                                                                                      "url": "https://rickandmortyapi.com/api/character/1",
-                                                                                      "created": "2017-11-04T18:48:46.250Z"
-                                                                               }   ,{
                                                                                       "id": 4,
                                                                                       "name": "Bert",
                                                                                       "status": "Alive",
